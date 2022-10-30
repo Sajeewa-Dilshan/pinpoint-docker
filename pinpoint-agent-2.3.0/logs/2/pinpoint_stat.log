@@ -1,0 +1,683 @@
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=1, callsStarted=1, callsSucceeded=0, lastCallStarted=1637832931849}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=9, creationTime=1637832931739, events.size=8}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Exiting idle mode, severity=CT_INFO, timestamp=1637832931814}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Address resolved: [[[/127.0.0.1:9993]/{}]], severity=CT_INFO, timestamp=1637832931831}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Child Subchannel started, severity=CT_INFO, timestamp=1637832931845, subchannelRef=InternalSubchannel{logId=3, addressGroups=[[[/127.0.0.1:9993]/{}]]}}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=Subchannel<3>: (127.0.0.1:9993), streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832931849}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832932169}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832932190}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832932784}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832932785}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=11, creationTime=1637832931839, events.size=8}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<6>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637832932180}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 596,650,403 ns, severity=CT_INFO, timestamp=1637832932184}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<6>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637832932190}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637832932782}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<17>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637832932784}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<17>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637832932785}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 1,835,792,636 ns, severity=CT_INFO, timestamp=1637832932785}
+11-25 15:05:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<17>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637832932785}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=8, callsStarted=8, callsSucceeded=0, lastCallStarted=1637832974754}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=21, creationTime=1637832931739, events.size=8}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832940712}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832940713}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832946991}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832946992}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832956044}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832956045}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832971085}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832971086}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=41, creationTime=1637832931839, events.size=8}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<38>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637832956044}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 15,039,108,226 ns, severity=CT_INFO, timestamp=1637832956044}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<38>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637832956045}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637832971084}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<41>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637832971085}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<41>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637832971085}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 22,566,804,495 ns, severity=CT_INFO, timestamp=1637832971086}
+11-25 15:06:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<41>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637832971087}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=10, callsStarted=10, callsSucceeded=0, lastCallStarted=1637833028532}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=25, creationTime=1637832931739, events.size=8}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832956044}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832956045}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832971085}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832971086}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833036780}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=51, creationTime=1637832931839, events.size=8}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<45>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637832993654}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 43,124,826,242 ns, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<45>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637833036779}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<50>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637833036780}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<50>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833036781}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 74,804,268,555 ns, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:07:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<50>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=12, callsStarted=12, callsSucceeded=0, lastCallStarted=1637833088534}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=27, creationTime=1637832931739, events.size=8}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832971085}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832971086}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833036780}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833111587}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=56, creationTime=1637832931839, events.size=8}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<50>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833036781}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 74,804,268,555 ns, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<50>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637833111586}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<54>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637833111587}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<54>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833111587}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 111,263,033,232 ns, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:08:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<54>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=14, callsStarted=14, callsSucceeded=0, lastCallStarted=1637833148537}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=27, creationTime=1637832931739, events.size=8}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832971085}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832971086}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833036780}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833111587}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=56, creationTime=1637832931839, events.size=8}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<50>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833036781}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 74,804,268,555 ns, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<50>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637833111586}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<54>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637833111587}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<54>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833111587}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 111,263,033,232 ns, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:09:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<54>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=16, callsStarted=16, callsSucceeded=0, lastCallStarted=1637833208539}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=29, creationTime=1637832931739, events.size=8}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833036780}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833111587}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833222852}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=61, creationTime=1637832931839, events.size=8}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<54>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833111587}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 111,263,033,232 ns, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<54>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637833222851}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<59>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637833222852}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<59>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833222852}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 117,794,181,075 ns, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:10:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<59>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=18, callsStarted=18, callsSucceeded=0, lastCallStarted=1637833268541}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=29, creationTime=1637832931739, events.size=8}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637832993654}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833036780}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833111587}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833222852}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=61, creationTime=1637832931839, events.size=8}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<54>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833111587}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 111,263,033,232 ns, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<54>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637833222851}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<59>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637833222852}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<59>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833222852}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 117,794,181,075 ns, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:11:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<59>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=20, callsStarted=20, callsSucceeded=0, lastCallStarted=1637833328543}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=31, creationTime=1637832931739, events.size=8}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833036780}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833111587}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833222852}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833340648}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833340649}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=66, creationTime=1637832931839, events.size=8}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<59>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833222852}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 117,794,181,075 ns, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<59>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637833340647}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<63>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637833340648}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<63>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833340648}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 129,886,118,882 ns, severity=CT_INFO, timestamp=1637833340649}
+11-25 15:12:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<63>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833340649}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {target=127.0.0.1:9993, stat=TRANSIENT_FAILURE}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 {callsFailed=22, callsStarted=22, callsSucceeded=0, lastCallStarted=1637833388546}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 subchannels:[3]
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace {numEventsLogged=31, creationTime=1637832931739, events.size=8}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833036780}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833036781}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833111587}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833111588}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833222852}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering CONNECTING state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=OK, description=null, cause=null}, drop=false}}, severity=CT_INFO, timestamp=1637833340648}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- RootChannel-1 channelTrace.events:Event{description=Entering TRANSIENT_FAILURE state with picker: Picker{result=PickResult{subchannel=null, streamTracerFactory=null, status=Status{code=UNAVAILABLE, description=io exception, cause=io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: /127.0.0.1:9993
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.throwConnectException(Errors.java:124)
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:251)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:673)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:650)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:530)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:378)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+}, drop=false}}, severity=CT_INFO, timestamp=1637833340649}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {target=[[[/127.0.0.1:9993]/{}]], stat=TRANSIENT_FAILURE}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 {callsFailed=0, callsStarted=0, callsSucceeded=0, lastCallStarted=0}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace {numEventsLogged=66, creationTime=1637832931839, events.size=8}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<59>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833222852}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 117,794,181,075 ns, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<59>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833222853}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=CONNECTING after backoff, severity=CT_INFO, timestamp=1637833340647}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=Started transport NettyClientTransport<63>: (/127.0.0.1:9993), severity=CT_INFO, timestamp=1637833340648}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<63>: (/127.0.0.1:9993) SHUTDOWN with UNAVAILABLE(io exception), severity=CT_INFO, timestamp=1637833340648}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=TRANSIENT_FAILURE (UNAVAILABLE(io exception)). Will reconnect after 129,886,118,882 ns, severity=CT_INFO, timestamp=1637833340649}
+11-25 15:13:32.032 [edReporter(0-0)] INFO  c.n.p.m.SpanChannel                      -- 1-SubChannel-3 channelTrace.events:Event{description=NettyClientTransport<63>: (/127.0.0.1:9993) Terminated, severity=CT_INFO, timestamp=1637833340649}
